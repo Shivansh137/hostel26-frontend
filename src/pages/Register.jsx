@@ -68,7 +68,7 @@ const Register = () => {
     formData.append('floor', data.floor);
     formData.append('password', data.password);
     formData.append('cpassword', data.cpassword);
-    const res = await fetch('/register',{
+    const res = await fetch('https://hostel26-server.onrender.com/register',{
       method: "POST",
       headers: {
         'Accept':'image/*'

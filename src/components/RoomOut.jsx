@@ -32,7 +32,7 @@ const RoomOut = (props) => {
   const [studentsData, setStudentsData] = useState([{}]);
   const [show, setShow] = useState(false);
   useEffect(() => {
-    fetch(`/students/${props.room}`, {
+    fetch(`https://hostel26-server.onrender.com/students/${props.room}`, {
       method: "GET",
       headers: {
         'Content-Type': 'application/json'
@@ -70,7 +70,7 @@ const RoomOut = (props) => {
         return (
           <>
           <div className="dfc aic round3 animin">
-          <img className='round3 ht10' style={{width:"40vmin"}} src={`http://localhost:8000/images/${student.profilePic}`} alt="profile" />
+          <img className='round3 ht10' style={{width:"40vmin"}} src={`https://hostel26-server.onrender.com/images/${student.profilePic}`} alt="profile" />
           <p className='ls1'>{student.name}</p>
           </div>
           </>

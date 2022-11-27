@@ -18,7 +18,7 @@ const Login = () => {
   }
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('/login', {
+    fetch('https://hostel26-server.onrender.com/login', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'

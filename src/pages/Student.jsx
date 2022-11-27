@@ -52,7 +52,7 @@ const Student = () => {
   //EFFECTS
   useEffect(() => {
     //FETCHING THE DATA
-    fetch('/students', {
+    fetch('https://hostel26-server.onrender.com/students', {
       method: "GET",
       headers: {
         'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ const Student = () => {
           setStudentsData(studentsdata)//STORING STUDENTS DATA
           setStudents(studentsdata.map((student) => {
             const { name, branch, section, city, mobile, room, floor, profilePic } = student;
-            return (<StudentCard key={mobile} name={name} branch={branch} section={section} city={city} mobile={mobile} room={room} floor={floor} profilePic={`http://localhost:8000/images/${profilePic}`} />)
+            return (<StudentCard key={mobile} name={name} branch={branch} section={section} city={city} mobile={mobile} room={room} floor={floor} profilePic={`https://hostel26-server.onrender.com/images/${profilePic}`} />)
           }));
 
         }).catch((err) => {})
@@ -93,7 +93,7 @@ const Student = () => {
       }
       let final_data = sorted_data.map((student) => {
         const { name, branch, city, mobile, room, floor, profilePic } = student;
-        return (<StudentCard key={mobile} name={name} branch={branch} city={city} mobile={mobile} room={room} floor={floor} profilePic={`http://localhost:8000/images/${profilePic}`} />)
+        return (<StudentCard key={mobile} name={name} branch={branch} city={city} mobile={mobile} room={room} floor={floor} profilePic={`https://hostel26-server.onrender.com/images/${profilePic}`} />)
       })
       if (final_data.length === 0) {
         final_data = "No Matches Found🔍"
@@ -116,7 +116,7 @@ const Student = () => {
       }
       let final_data = sorted_data.map((student) => {
         const { name, branch,section, city, mobile, room, floor, profilePic } = student;
-        return (<StudentCard key={mobile} name={name} branch={branch} section={section} city={city} mobile={mobile} room={room} floor={floor} profilePic={`http://localhost:8000/images/${profilePic}`} />)
+        return (<StudentCard key={mobile} name={name} branch={branch} section={section} city={city} mobile={mobile} room={room} floor={floor} profilePic={`https://hostel26-server.onrender.com/images/${profilePic}`} />)
       })
       if (final_data.length === 0) {
         final_data = "No Matches Found🔍"
@@ -130,7 +130,7 @@ const Student = () => {
     let search_data = studentsData.filter((student) => { return (student.name).toLowerCase().indexOf((e.target.value).toLowerCase()) !== -1 })
     let final_data = search_data.map((student) => {
       const { name, branch,section, city, mobile, room, floor, profilePic } = student;
-      return (<StudentCard key={mobile} name={name} branch={branch} section={section} city={city} mobile={mobile} room={room} floor={floor} profilePic={`http://localhost:8000/images/${profilePic}`} />)
+      return (<StudentCard key={mobile} name={name} branch={branch} section={section} city={city} mobile={mobile} room={room} floor={floor} profilePic={`https://hostel26-server.onrender.com/images/${profilePic}`} />)
     })
     if (final_data.length === 0) {
       final_data = "No Matches Found🔍"
