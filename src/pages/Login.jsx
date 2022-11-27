@@ -20,6 +20,7 @@ const Login = () => {
     e.preventDefault();
     fetch('https://hostel26-server.onrender.com/login', {
       method: "POST",
+      credentials: "include",
       headers: {
         'Content-Type': 'application/json'
       },
