@@ -26,7 +26,6 @@ const NavBar = (props) => {
     <>
       <StyledNav className='dfc aic'>
         <p className='bold df jce fw'>HOSTEL'26</p>
-        <p style={{fontSize:"1.8rem"}}>🔥Ek Baat toh saaf hai Hostel waale Baap hain🔥</p>
         <span className='grp df aic jce fw'>
           <NavLink className='dfc aic f1' to='/'><MdHomeFilled className='f4'/>Home</NavLink>
           <NavLink className='dfc aic f1' to='/hostel'><MdApartment className='f4'/>Hostel</NavLink>

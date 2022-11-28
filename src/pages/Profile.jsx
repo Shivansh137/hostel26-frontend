@@ -126,7 +126,7 @@ const imageUpload = async(e) => {
       </div>
       <div className='dfc '>
         <div className='mgb5'>
-            <p style={{ fontSize: "6vmin", fontFamily: "Verdana"}} className='ls2 bold'>{ studentData.name}</p>
+            <p style={{ fontSize: "6vmin", fontFamily: "Verdana"}} className='ls1 bold'>{ studentData.name}</p>
         <p className='mgx2' style={{ fontSize: "3vmin", fontFamily: "Verdana" }}>({studentData.branch})</p>
        </div>
           <StyledTable>

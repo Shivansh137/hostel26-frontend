@@ -119,6 +119,10 @@ const Register = () => {
         <option value="H">H</option>
         <option value="I">I</option>
         <option value="J">J</option>
+        <option value="K">K</option>
+        <option value="L">L</option>
+        <option value="M">M</option>
+        <option value="N">N</option>
        </select>
           <input type="text" placeholder='City' style={{gridArea:"city"}} name='city' value={data.city} onChange={handleInput}/>
         <input type="number" placeholder='Room' style={{ gridArea: "room" }} name='room' value={data.room} onChange={handleInput} />

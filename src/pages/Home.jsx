@@ -92,6 +92,7 @@ const Home = () => {
       alert("Select Image");
     }
     else {
+      e.preventDefault();
       const form = new FormData();
       form.append('title', data.title);
       form.append('date', data.date);
@@ -106,7 +107,7 @@ const Home = () => {
         body: form
       });
       const data3 = await res.json();
-      setPosts([...posts, data3]);
+      setPosts(posts.concat([data3]));
       setVisible(false);
     }
   }
