@@ -6,6 +6,10 @@
       "src": "favicon.ico",
       "sizes": "32x32",
       "type": "image/x-icon"
+    }, {
+      "src": "images/logo_sgsits.png",
+      "sizes": "192x192",
+      "type": "image/png"
     }
   ],
   "start_url": ".",
