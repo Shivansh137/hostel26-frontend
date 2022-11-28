@@ -57,9 +57,9 @@ const Student = () => {
       headers: {
         'Content-Type': 'application/json'
       },
-       body: {
+      body: JSON.stringify({
         token:localStorage.getItem('token')
-      }
+      })
     }).then((data) => {
       if (data.status !== 200) {
         navigate('/login')
