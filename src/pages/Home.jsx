@@ -116,7 +116,7 @@ const Home = () => {
       <p className='mg3'>Welcome to first year boys hostel of SGSITS Indore</p>
       <span className='spin1 center mgx6' style={{ zIndex: "-2" }}></span>
       <div className='grid' id='gallery'>
-        {posts.map(post => <Post key={post.img} img={post.img} title={post.title} date={post.date} by={post.by} />)}
+        {posts.reverse().map(post => <Post key={post.img} img={post.img} title={post.title} date={post.date} by={post.by} />)}
       </div>
       <br /><br /><br /><br id='bottom' />
       <PostButton onClick={() => { setVisible(true) }} className='circle btn df aic jcc cwhite posfix'>+</PostButton>
