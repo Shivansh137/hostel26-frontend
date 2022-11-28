@@ -69,7 +69,7 @@ const Student = () => {
           setStudentsData(studentsdata)//STORING STUDENTS DATA
           setStudents(studentsdata.map((student) => {
             const { name, branch, section, city, mobile, room, floor, profilePic } = student;
-            return (<StudentCard key={mobile} name={name} branch={branch} section={section} city={city} mobile={mobile} room={room} floor={floor} profilePic={`https://hostel26-server.onrender.com/images/${profilePic}`} />)
+            return (<StudentCard key={mobile} name={name} branch={branch} section={section} city={city} room={room} floor={floor} profilePic={`https://hostel26-server.onrender.com/images/${profilePic}`} />)
           }));
 
         }).catch((err) => {})

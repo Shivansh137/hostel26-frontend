@@ -58,7 +58,7 @@ const Home = () => {
         }
       })
       const data2 = await res2.json();
-        setPosts(data2);
+      setPosts(data2);
     }
   }
   useEffect(() => {

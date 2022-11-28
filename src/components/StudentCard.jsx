@@ -23,7 +23,7 @@ const Styled = styled.div`
     }
   }
   img{
-  height:calc(100px + 10vmin);
+  height:calc(100px + 6vmin);
   }
 `
 
@@ -37,7 +37,6 @@ const StudentCard = (props) => {
           <p><MdEngineering /><span>{props.branch}</span></p>
           <p><MdLocationOn /> <span>{props.city}</span></p>
           <p><MdGroup /> <span>Section : {props.section}</span></p>
-          <p><MdPhone /> <span>{props.mobile}</span></p>
           <p><MdDoorFront /> <span>{props.room} ({props.floor})</span></p>
         </div>
      </Styled>
