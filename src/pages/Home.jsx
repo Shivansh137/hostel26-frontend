@@ -36,7 +36,7 @@ const Home = () => {
 
   const getData = async () => {
     {
-      const res1 = await fetch('https://hostel26-server.onrender.com/profile', {
+      const res1 = await fetch('https://hostel26-server.cyclic.app/profile', {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
@@ -51,7 +51,7 @@ const Home = () => {
       const data1 = await res1.json();
       setStudentData(data1);
 
-      const res2 = await fetch('https://hostel26-server.onrender.com/posts', {
+      const res2 = await fetch('https://hostel26-server.cyclic.app/posts', {
         method: "GET",
         headers: {
           'Content-Type': 'application/json'
@@ -99,7 +99,7 @@ const Home = () => {
       form.append('by', studentData.name);
       form.append('post',postImg);
 
-      const res = fetch('https://hostel26-server.onrender.com/', {
+      const res = fetch('https://hostel26-server.cyclic.app/', {
         method: "POST",
         headers: {
           'Accept': 'image/*'

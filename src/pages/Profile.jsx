@@ -50,7 +50,7 @@ const Profile = () => {
   const [visible, setVisible] = useState(false);
   const getData = () => {
     //FETCHING THE DATA
-    fetch('https://hostel26-server.onrender.com/profile', {
+    fetch('https://hostel26-server.cyclic.app/profile', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -90,7 +90,7 @@ const Profile = () => {
   }
   const handleSubmit = (e) => {
     e.preventDefault()
-    fetch(`https://hostel26-server.onrender.com/profile/${studentData._id}`, {
+    fetch(`https://hostel26-server.cyclic.app/profile/${studentData._id}`, {
       method: "PATCH",
       headers: {
         'Content-Type': "application/json"
@@ -105,7 +105,7 @@ const Profile = () => {
 const imageUpload = async(e) => {
    const form = new FormData();
    form.append('updateprofile', e.target.files[0]);
-   const res = await fetch(`https://hostel26-server.onrender.com/profile/${studentData._id}/${studentData.profilePic}`, {
+  const res = await fetch(`https://hostel26-server.cyclic.app/profile/${studentData._id}/${studentData.profilePic}`, {
     method: "PATCH",
     headers: {
       'Accept': 'image/*'
@@ -120,7 +120,7 @@ const imageUpload = async(e) => {
     <>
     <StyledProfile className=" df jce aic round3 center">
 
-        <div id='profilePic' style={{ width: "30%", height: "60%", backgroundImage:`url(${`https://hostel26-server.onrender.com/images/${studentData.profilePic}`})`, backgroundSize:"100% 100%",overflow:"hidden"}} className='bgblue posrel mgb2 round3'>
+        <div id='profilePic' style={{ width: "30%", height: "60%", backgroundImage: `url(${`https://hostel26-server.cyclic.app/images/${studentData.profilePic}`})`, backgroundSize: "100% 100%", overflow: "hidden" }} className='bgblue posrel mgb2 round3'>
         <button style={{backgroundColor:"rgba(0,0,0,.5)", left:"0"}} className='cwhite nobdr p2 bold ls1 posabs fw b0' onClick={() => { uploadImg.current.click(); }} htmlFor="profile"><input ref={uploadImg} type="file" name="profile" className='invisible' onChange={imageUpload} />Update</button>
 
       </div>

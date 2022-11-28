@@ -26,7 +26,7 @@ const Post = (props) => {
     return `${arr[2]}/${arr[1]}/${arr[0]}`
   }
 
-  const img = `url(https://hostel26-server.onrender.com/images/${props.img})`
+  const img = `url(https://hostel26-server.cyclic.app/images/${props.img})`
   return (
     <>
       <StyledPost style={{backgroundImage:img, backgroundSize:"100% 100%"}}>

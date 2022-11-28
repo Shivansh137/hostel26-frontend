@@ -18,7 +18,7 @@ const Login = () => {
   }
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('https://hostel26-server.onrender.com/login', {
+    fetch('https://hostel26-server.cyclic.app/login', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
