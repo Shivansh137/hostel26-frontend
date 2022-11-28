@@ -41,7 +41,7 @@ const Home = () => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON(localStorage.getItem('token'))
+        body: JSON.stringify(localStorage.getItem('token'))
       })
       if (res1.status !== 200) {
         navigate('/login');

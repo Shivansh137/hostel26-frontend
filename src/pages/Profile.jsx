@@ -55,7 +55,7 @@ const Profile = () => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON(localStorage.getItem('token'))
+      body: JSON.stringify(localStorage.getItem('token'))
     }).then((data) => {
       if (data.status !== 200) {
         navigate('/login')
