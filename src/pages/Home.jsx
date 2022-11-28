@@ -37,10 +37,11 @@ const Home = () => {
   const getData = async () => {
     {
       const res1 = await fetch('https://hostel26-server.onrender.com/profile', {
-        method: "GET",
+        method: "POST",
         headers: {
-          'Content-Type': 'application.json'
-        }
+          'Content-Type': 'application/json'
+        },
+        body: JSON(localStorage.getItem('token'))
       })
       if (res1.status !== 200) {
         navigate('/login');
@@ -51,7 +52,7 @@ const Home = () => {
       const res2 = await fetch('https://hostel26-server.onrender.com/posts', {
         method: "GET",
         headers: {
-          'Content-Type': 'application.json'
+          'Content-Type': 'application/json'
         }
       })
 

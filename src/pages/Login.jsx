@@ -20,14 +20,14 @@ const Login = () => {
     e.preventDefault();
     fetch('https://hostel26-server.onrender.com/login', {
       method: "POST",
-      credentials: "include",
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
     }).then((res) => {
-      res.json().then((res) => {
-        if (res === "Login Successfull") {
+      res.json().then((token) => {
+        if (res.status === 200) {
+          localStorage.setItem('token', token);
           navigate('/');
         }
         else {

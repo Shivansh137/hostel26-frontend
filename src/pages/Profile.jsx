@@ -51,10 +51,11 @@ const Profile = () => {
   const getData = () => {
     //FETCHING THE DATA
     fetch('https://hostel26-server.onrender.com/profile', {
-      method: "GET",
+      method: "POST",
       headers: {
         'Content-Type': 'application/json'
-      }
+      },
+      body: JSON(localStorage.getItem('token'))
     }).then((data) => {
       if (data.status !== 200) {
         navigate('/login')
