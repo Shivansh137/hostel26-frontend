@@ -55,10 +55,6 @@ const Home = () => {
           'Content-Type': 'application/json'
         }
       })
-
-      if (res2.status !== 200) {
-        navigate('/login');
-      }
       const data2 = await res2.json();
         setPosts(data2);
     }
