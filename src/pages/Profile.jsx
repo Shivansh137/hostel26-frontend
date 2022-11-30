@@ -120,7 +120,7 @@ const imageUpload = async(e) => {
     <>
     <StyledProfile className=" df jce aic round3 center">
 
-        <div id='profilePic' style={{ width: "30%", height: "60%", backgroundImage: `url(${`https://hostel26-server.cyclic.app/images/${studentData.profilePic}`})`, backgroundSize: "100% 100%", overflow: "hidden" }} className='bgblue posrel mgb2 round3'>
+        <div id='profilePic' style={{ width: "30%", height: "60%", backgroundImage: `url(${`https://hostel26-server.cyclic.app/images/img_avatar.png`})`, backgroundSize: "100% 100%", overflow: "hidden" }} className='bgblue posrel mgb2 round3'>
         <button style={{backgroundColor:"rgba(0,0,0,.5)", left:"0"}} className='cwhite nobdr p2 bold ls1 posabs fw b0' onClick={() => { uploadImg.current.click(); }} htmlFor="profile"><input ref={uploadImg} type="file" name="profile" className='invisible' onChange={imageUpload} />Update</button>
 
       </div>

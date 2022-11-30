@@ -35,8 +35,9 @@ export const StyledForm = styled.form`
 `
 
 const Register = () => {
-  const [data, setData] = useState({ name: "", branch: "",section:"", city: "", mobile: "", room: "", floor: "", password: "", cpassword: ""});
+  const [data, setData] = useState({ name: "", branch: "", section: "", city: "", mobile: "", room: "", floor: "", password: "", cpassword: "" });
   const [profileImg, setprofileImg] = useState(new Blob());
+  const [loading, setLoading] = useState(false);
   const uploadImg = useRef(null);
   const navigate = useNavigate();
   let name, value;
@@ -44,7 +45,7 @@ const Register = () => {
     e.preventDefault();
     name = e.target.name;
     value = e.target.value;
-    if ((name === "name"|| name==="city") && value.charAt(value.length - 1) !== " " && value !== ""  &&  !isNaN(value.charAt(value.length - 1))) {
+    if ((name === "name" || name === "city") && value.charAt(value.length - 1) !== " " && value !== "" && !isNaN(value.charAt(value.length - 1))) {
       alert("Name me numbers kahan se aa gye🤔\nEnter text only")
     }
     else {
@@ -53,12 +54,13 @@ const Register = () => {
   }
   const handleReset = (e) => {
     e.preventDefault();
-    setData({  name: "", branch: "",section:"", city: "", mobile: "", room: "",floor:"", password:"", cpassword: ""})
+    setData({ name: "", branch: "", section: "", city: "", mobile: "", room: "", floor: "", password: "", cpassword: "" })
   }
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
+    setLoading(true);
     e.preventDefault();
     const formData = new FormData();
-    formData.append('profile',profileImg);
+    formData.append('profile', profileImg);
     formData.append('name', data.name);
     formData.append('branch', data.branch);
     formData.append('section', data.section);
@@ -71,9 +73,9 @@ const Register = () => {
     const res = await fetch('https://hostel26-server.cyclic.app/register', {
       method: "POST",
       headers: {
-        'Accept':'image/*'
+        'Accept': 'image/*'
       },
-      body:formData
+      body: formData
     })
     const response = await res.json();
     if (!response) {
@@ -93,6 +95,7 @@ const Register = () => {
 
   return (
     <>
+      {loading && <div className="blur"><p className="center">Loading...</p></div>}
         <StyledForm encType='multipart/form-data' onSubmit={(e)=>{e.preventDefault()}}>
           <p className='bold' style={{gridArea:"title",textAlign:"center"}}>REGISTER</p>
           <input type="text" placeholder='Name' style={{ gridArea: "name" }} name='name' value={data.name} onChange={handleInput} />

@@ -6,6 +6,7 @@ import PostForm from '../components/PostForm'
 import { MdSend, MdPhoto , MdArrowDownward} from 'react-icons/md'
 import { useRef, useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
+import sampleimg from 'images/website-under-construction.webp'
 
 const PostButton = styled.button`
    width: 60px;
@@ -92,7 +93,6 @@ const Home = () => {
       alert("Select Image");
     }
     else {
-      e.preventDefault();
       const form = new FormData();
       form.append('title', data.title);
       form.append('date', data.date);
@@ -107,7 +107,6 @@ const Home = () => {
         body: form
       });
       const data3 = await res.json();
-      setPosts(posts.concat([data3]));
       setVisible(false);
     }
   }
@@ -117,7 +116,7 @@ const Home = () => {
       <p className='mg3'>Welcome to first year boys hostel of SGSITS Indore</p>
       <span className='spin1 center mgx6' style={{ zIndex: "-2" }}></span>
       <div className='grid' id='gallery'>
-        {posts.reverse().map(post => <Post key={post.img} img={post.img} title={post.title} date={post.date} by={post.by} />)}
+        {posts.reverse().map(post => <Post key={post.img} img={sampleimg} title={post.title} date={post.date} by={post.by} />)}
       </div>
       <br /><br /><br /><br id='bottom' />
       <PostButton onClick={() => { setVisible(true) }} className='circle btn df aic jcc cwhite posfix'>+</PostButton>

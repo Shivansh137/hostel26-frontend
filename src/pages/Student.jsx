@@ -69,7 +69,7 @@ const Student = () => {
           setStudentsData(studentsdata)//STORING STUDENTS DATA
           setStudents(studentsdata.map((student) => {
             const { name, branch, section, city, mobile, room, floor, profilePic } = student;
-            return (<StudentCard key={mobile} name={name} branch={branch} section={section} city={city} room={room} floor={floor} profilePic={`https://hostel26-server.cyclic.app/images/${profilePic}`} />)
+            return (<StudentCard key={mobile} name={name} branch={branch} section={section} city={city} room={room} floor={floor} profilePic={`https://hostel26-server.cyclic.app/images/img_avatar.png`} />)
           }));
 
         }).catch((err) => {})
@@ -96,7 +96,7 @@ const Student = () => {
       }
       let final_data = sorted_data.map((student) => {
         const { name, branch, city, mobile, room, floor, profilePic } = student;
-        return (<StudentCard key={mobile} name={name} branch={branch} city={city} mobile={mobile} room={room} floor={floor} profilePic={`https://hostel26-server.cyclic.app/images/${profilePic}`} />)
+        return (<StudentCard key={mobile} name={name} branch={branch} city={city} mobile={mobile} room={room} floor={floor} profilePic={`https://hostel26-server.cyclic.app/images/img_avatar.png`} />)
       })
       if (final_data.length === 0) {
         final_data = "No Matches Found🔍"
@@ -119,7 +119,7 @@ const Student = () => {
       }
       let final_data = sorted_data.map((student) => {
         const { name, branch,section, city, mobile, room, floor, profilePic } = student;
-        return (<StudentCard key={mobile} name={name} branch={branch} section={section} city={city} mobile={mobile} room={room} floor={floor} profilePic={`https://hostel26-server.cyclic.app/images/${profilePic}`} />)
+        return (<StudentCard key={mobile} name={name} branch={branch} section={section} city={city} mobile={mobile} room={room} floor={floor} profilePic={`https://hostel26-server.cyclic.app/images/img_avatar.png`} />)
       })
       if (final_data.length === 0) {
         final_data = "No Matches Found🔍"
@@ -133,7 +133,7 @@ const Student = () => {
     let search_data = studentsData.filter((student) => { return (student.name).toLowerCase().indexOf((e.target.value).toLowerCase()) !== -1 })
     let final_data = search_data.map((student) => {
       const { name, branch,section, city, mobile, room, floor, profilePic } = student;
-      return (<StudentCard key={mobile} name={name} branch={branch} section={section} city={city} mobile={mobile} room={room} floor={floor} profilePic={`https://hostel26-server.cyclic.app/images/${profilePic}`} />)
+      return (<StudentCard key={mobile} name={name} branch={branch} section={section} city={city} mobile={mobile} room={room} floor={floor} profilePic={`https://hostel26-server.cyclic.app/images/img_avatar.png`} />)
     })
     if (final_data.length === 0) {
       final_data = "No Matches Found🔍"
