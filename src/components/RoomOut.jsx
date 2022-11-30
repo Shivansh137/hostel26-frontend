@@ -70,7 +70,7 @@ const RoomOut = (props) => {
         return (
           <>
           <div className="dfc aic round3 animin">
-              <img className='round3 ht10' style={{ width: "40vmin" }} src={`https://hostel26-server.cyclic.app/images/${student.profilePic}`} alt="profile" />
+              <img className='round3 ht10' style={{ width: "40vmin" }} src={`https://hostel26-server.cyclic.app/images/img_avatar.png`} alt="profile" />
           <p className='ls1'>{student.name}</p>
           </div>
           </>
