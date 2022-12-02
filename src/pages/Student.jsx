@@ -153,7 +153,8 @@ const Student = () => {
         <option value="Electronics and Telecommunication">EC</option>
         <option value="Electronics and Instrumentation">EI</option>
         <option value="Mechanical Engineering">ME</option>
-        <option value="Electrical Engineering">EE</option>
+            <option value="Electrical Engineering">EE</option>
+            <option value="Civil Engineering">CE</option>
         <option value="Bio Medical Engineering">BME</option>
         <option value="Industrial Production">IP</option>
           </select>
