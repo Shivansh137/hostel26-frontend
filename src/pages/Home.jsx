@@ -112,7 +112,7 @@ const Home = () => {
 
   return (
     <>
-      <p className='mg3'>Welcome to first year boys hostel of SGSITS Indore</p>
+      <p className='mg3'>THIS IS NOT THE OFFICIAL WEBSITE THIS IS FOR PERSONAL USE ONLY DON'T SHARE IT TO ANYONE</p>
       <span className='spin1 center mgx6' style={{ zIndex: "-2" }}></span>
       <div className='grid' id='gallery'>
         {posts.reverse().map(post => <Post key={post.img} img='https://hostel26-server.cyclic.app/images/website-under-construction.webp' title={post.title} date={post.date} by={post.by} />)}
