@@ -59,23 +59,12 @@ const Register = () => {
   const handleSubmit = async (e) => {
     setLoading(true);
     e.preventDefault();
-    const formData = new FormData();
-    formData.append('profile', profileImg);
-    formData.append('name', data.name);
-    formData.append('branch', data.branch);
-    formData.append('section', data.section);
-    formData.append('city', data.city);
-    formData.append('mobile', data.mobile);
-    formData.append('room', data.room);
-    formData.append('floor', data.floor);
-    formData.append('password', data.password);
-    formData.append('cpassword', data.cpassword);
     const res = await fetch('https://hostel26-server.cyclic.app/register', {
       method: "POST",
       headers: {
-        'Accept': 'image/*'
+        'Content-Type':"application/json"
       },
-      body: formData
+      body: JSON.stringify(data)
     })
     const response = await res.json();
     if (!response) {
