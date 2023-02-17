@@ -1,6 +1,6 @@
 {
-  "short_name": "Hostel 26",
   "name": "Hostel 26",
+  "short_name": "Hostel 26",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,8 +8,9 @@
       "type": "image/x-icon"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#4c00b0",
-  "background_color": "#ffffff"
+  "orientation":"portrait",
+  "background_color": "#4c00b0",
+  "theme_color": "#4c00b0"
 }
